@@ -21,9 +21,11 @@ def print_header
 end
 
 def print(students)
-  students.each_with_index do |student, number|
-    puts "#{number + 1} #{student[:name]} (#{student[:cohort]} cohort)"
-  end
+counter = 0 
+  while counter <= students.last.index
+    puts "#{student[counter[:name]]} (#{student[counter[:cohort]]} cohort)"
+    counter += 1
+  end    
 end
 
 def print_footer(students)
