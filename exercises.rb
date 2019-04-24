@@ -21,10 +21,10 @@ def print_header
 end
 
 def print(students)
-counter = 0 
-  while counter <= students.last.index
-    puts "#{student[counter[:name]]} (#{student[counter[:cohort]]} cohort)"
-    counter += 1
+  students.each do |student|
+    if student[:name][0] == "S"
+      puts "#{student[:name]} (#{student[:cohort]} cohort)"
+    end
   end    
 end
 
@@ -36,3 +36,16 @@ students = input_students
 print_header
 print(students)
 print_footer(students)
+
+# Exercise 1 - Done
+# Exercise 2
+# Exercise 3
+# Exercise 4
+# Exercise 5
+# Exercise 6
+# Exercise 7
+# Exercise 8
+# Exercise 9
+# Exercise 10
+# Exercise 11
+# Exercise 12
