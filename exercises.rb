@@ -5,33 +5,31 @@ def input_students
   students = []
   
   name = gets.chomp
-  location = gets.chomp
-  club = gets.chomp
+  cohort = gets.chomp.to_sym
   
   while !name.empty? do
-    students << {name: name, cohort: :november, place_of_birth: location, club: club}
+    students << {name: name, cohort: cohort}
     puts "Now we have #{students.count} students"
     name = gets.chomp
+    cohort = gets.chomp.to_sym
   end
   
   students
 end
 
 def print_header
-  puts "The students of Villain Academy".center(50)
-  puts "-------------".center(50)
+  puts "The students of Villain Academy"
+  puts "-------------"
 end
 
 def print(students)
   students.each do |student|
-    if student[:name].length <= 12
-      puts "#{student[:name]} (#{student[:cohort]} cohort)".center(50)
-    end
+    puts "#{student[:name]} (#{student[:cohort]} cohort)"
   end    
 end
 
 def print_footer(students)
-  puts "Overall, we have #{students.count} great students".center(50)
+  puts "Overall, we have #{students.count} great students"
 end
 
 students = input_students
