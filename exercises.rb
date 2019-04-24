@@ -22,7 +22,7 @@ end
 
 def print(students)
   students.each do |student|
-    if student[:name][0] == "S"
+    if student[:name].length <= 12
       puts "#{student[:name]} (#{student[:cohort]} cohort)"
     end
   end    
@@ -38,8 +38,8 @@ print(students)
 print_footer(students)
 
 # Exercise 1 - Done
-# Exercise 2
-# Exercise 3
+# Exercise 2 - Done
+# Exercise 3 - Done
 # Exercise 4
 # Exercise 5
 # Exercise 6
