@@ -1,3 +1,8 @@
+# What happens if the user doesn't enter any students? 
+# It will try to print an empty list. 
+# How can you use an if statement (Control Flow) to only print the list
+# if there is at least one student in there?
+
 def input_students
   puts "Please enter the names of the students"
   puts "To finish, just hit return twice"
@@ -31,6 +36,8 @@ def print_footer(students)
 end
 
 students = input_students
-print_header
-print(students)
-print_footer(students)
+if !students.empty?
+  print_header
+  print(students)
+  print_footer(students)
+end
