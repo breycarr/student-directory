@@ -1,3 +1,5 @@
+# Our code only works with the student name and cohort. Add more information: hobbies, country of birth, height, etc.
+
 def input_students
   puts "Please enter the names of the students"
   puts "To finish, just hit return twice"
